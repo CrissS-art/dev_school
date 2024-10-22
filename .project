@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<projectDescription>
+	<name>devschool</name>
+	<comment></comment>
+	<projects>
+	</projects>
+	<buildSpec>
+		<buildCommand>
+			<name>org.eclipse.jdt.core.javabuilder</name>
+			<arguments>
+			</arguments>
+		</buildCommand>
+	</buildSpec>
+	<natures>
+		<nature>org.eclipse.jdt.core.javanature</nature>
+	</natures>
+	<linkedResources>
+		<link>
+			<name>jdbc.jar</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Desktop/mysql-connector-jar/jdbc.jar</locationURI>
+		</link>
+		<link>
+			<name>lib/dev_school.sql</name>
+			<type>1</type>
+			<locationURI>PARENT-2-PROJECT_LOC/Desktop/FichiersSQl/dev_school.sql</locationURI>
+		</link>
+	</linkedResources>
+</projectDescription>
