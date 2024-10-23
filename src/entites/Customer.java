@@ -3,10 +3,10 @@ package entites;
 public class Customer {
 
 //	attributes
-	int idCustomer;
-	String firstname;
-	String lastname;
-	String email;
+	private int idCustomer;
+	private String firstname;
+	private String lastname;
+	private String email;
 
 	//	constructors
 	public Customer(int idCustomer, String firstname, String lastname, String email) {

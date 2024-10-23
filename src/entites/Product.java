@@ -3,12 +3,12 @@ package entites;
 public class Product {
 
 //	attributes
-	int idProduct;
-	String name;
-	String description;
-	int length;
-	String type;
-	int price;
+	private int idProduct;
+	private String name;
+	private String description;
+	private int length;
+	private String type;
+	private int price;
 	
 //	constructors
 	public Product(int idProduct, String name, String description, int length, String type, int price) {
