@@ -1,4 +1,4 @@
-package entites;
+package fr.fms.entities;
 
 public class Customer {
 
@@ -7,13 +7,15 @@ public class Customer {
 	private String firstname;
 	private String lastname;
 	private String email;
+	private int idUser;
 
 	//	constructors
-	public Customer(int idCustomer, String firstname, String lastname, String email) {
+	public Customer(int idCustomer, String firstname, String lastname, String email, int idUser) {
 		this.idCustomer = idCustomer;
 		this.firstname = firstname;
 		this.lastname = lastname;
 		this.email = email;
+		this.setIdUser(idUser);
 	}
 
 	public Customer(String firstname, String lastname, String email) {
@@ -59,6 +61,14 @@ public class Customer {
 
 	public void setEmail(String email) {
 		this.email = email;
+	}
+
+	public int getIdUser() {
+		return idUser;
+	}
+
+	public void setIdUser(int idUser) {
+		this.idUser = idUser;
 	}
 	
 	
