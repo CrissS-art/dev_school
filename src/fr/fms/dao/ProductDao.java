@@ -1,9 +1,9 @@
 package fr.fms.dao;
 
-import java.beans.Statement;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 import java.sql.SQLException;
+import java.sql.Statement;
 import java.util.ArrayList;
 
 import fr.fms.entities.Product;
@@ -87,25 +87,25 @@ public class ProductDao implements Dao<Product> {
 		}	
 		return products;
 	}
-//	/** read all products by category distanciel présentiel**/
-//	public ArrayList<Product> readAllByCat(int id) {
-//		ArrayList<Product> articles = new ArrayList<Product>();
-//		String strSql = "SELECT * FROM T_Articles where idCategory=" + id;		
-//		try(Statement statement = connection.createStatement()){
-//			try(ResultSet resultSet = statement.executeQuery(strSql)){ 			
-//				while(resultSet.next()) {
-//					int rsIdProduct = resultSet.getInt(1);	
-//					String rsName = resultSet.getString(2);
-//					String rsDescription = resultSet.getString(3);
-//					int rsLength = resultSet.getInt(4);
-//					String rsType = resultSet.getString(5);
-//					int rsPrice = resultSet.getInt(6);			
-//					articles.add((new Product(rsIdProduct,rsName,rsDescription,rsLength,rsType,rsPrice)));						
-//				}	
-//			}
-//		} catch (SQLException e) {
-//			logger.severe("pb sql sur renvoir des articles d'une catÃ©gorie " + e.getMessage());
-//		}			
-//		return articles;
-//	}
+	/** read all products by category distanciel présentiel**/
+	public ArrayList<Product> readAllByType(String type) {
+		ArrayList<Product> products = new ArrayList<Product>();
+		String strSql = "SELECT * FROM product where type = " + type;		
+		try(Statement statement = connection.createStatement()){
+			try(ResultSet resultSet = statement.executeQuery(strSql)){ 			
+				while(resultSet.next()) {
+					int rsIdProduct = resultSet.getInt(1);	
+					String rsName = resultSet.getString(2);
+					String rsDescription = resultSet.getString(3);
+					int rsLength = resultSet.getInt(4);
+					String rsType = resultSet.getString(5);
+					int rsPrice = resultSet.getInt(6);			
+					products.add((new Product(rsIdProduct,rsName,rsDescription,rsLength,rsType,rsPrice)));	
+				}	
+			}
+		} catch (SQLException e) {
+			logger.severe("pb sql sur renvoi des articles d'une catÃ©gorie " + e.getMessage());
+		}			
+		return products;
+	}
 }

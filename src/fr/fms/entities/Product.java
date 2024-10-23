@@ -31,6 +31,8 @@ public class Product {
 		return "Product [idProduct=" + idProduct + ", name=" + name + ", description=" + description + ", length="
 				+ length + ", type=" + type + ", price=" + price + "]";
 	}
+	
+	//accessors
 	public int getIdProduct() {
 		return idProduct;
 	}

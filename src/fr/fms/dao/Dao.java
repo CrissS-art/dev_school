@@ -1,9 +1,10 @@
 package fr.fms.dao;
 
-import java.lang.System.Logger;
 import java.sql.Connection;
+import java.util.ArrayList;
+import java.util.logging.Logger;
 
-public interface Dao {
+public interface Dao<T> {
 	public static Connection connection = BddConnection.getConnection();
 	public static final Logger logger = Logger.getLogger(Dao.class.getName());
 
