@@ -2,13 +2,13 @@ package fr.fms.entities;
 
 public class Category {
 	
-	private int id;
+	private int idCategory;
 	private String name;
 	private String description;
 	
-	public Category(int id, String name, String description) {
+	public Category(int idCategory, String name, String description) {
 		super();
-		this.id = id;
+		this.idCategory = idCategory;
 		this.name = name;
 		this.description = description;
 	}
@@ -21,15 +21,15 @@ public class Category {
 
 	@Override
 	public String toString() {
-		return "Category [id=" + id + ", name=" + name + ", description=" + description + "]";
+		return "Category [idCategory=" + idCategory + ", name=" + name + ", description=" + description + "]";
 	}
 
-	public int getId() {
-		return id;
+	public int getIdCategory() {
+		return idCategory;
 	}
 
-	public void setId(int id) {
-		this.id = id;
+	public void setIdCategory(int idCategory) {
+		this.idCategory = idCategory;
 	}
 
 	public String getName() {
